@@ -1,0 +1,34 @@
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "title": "My second event",
+    "details": "This is my second event",
+    "slug": "my-second-event",
+    "maximumAttendees": 10
+}
+
+
+###
+
+POST http://localhost:3000/events/4918bccd-4d81-4b77-bde5-b62b7a911eb3/attendees
+Content-Type: application/json
+
+{
+    "name": "Henrique Medeiros",
+    "email": "henriquemalvar@gmail.com"
+}
+
+### 
+GET http://localhost:3000/events/4918bccd-4d81-4b77-bde5-b62b7a911eb3
+
+###
+
+GET http://localhost:3000/attendees/1/badge
+###
+
+GET http://localhost:3000/attendees/1/check-in
+
+###
+
+GET http://localhost:3000/events/4918bccd-4d81-4b77-bde5-b62b7a911eb3/attendees?query=Henrique
